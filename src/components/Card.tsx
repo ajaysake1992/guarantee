@@ -1,18 +1,19 @@
 import styles from "../styles/GuaranteeCard.module.css";
 
-type Card = {
+export type CardDetails = {
   id: number;
   amount: string;
-  status: string;
+  status: "Active" | "Pending";
 };
 
-type GuaranteeCardProps = {
-  item: Card;
+type CardProps = {
+  item: CardDetails;
+  onClick: () => void;
 };
 
-const GuaranteeCard = ({ item }: GuaranteeCardProps) => {
+const Card = ({ item, onClick }: CardProps) => {
   return (
-    <div className={`card  ${styles.cardStyle}`}>
+    <div className={`card  ${styles.cardStyle}`} onClick={onClick}>
       <div className="card-body">
         <h5 className="card-title">Guarantee {item.id}</h5>
         <p className="card-text">Amount: {item.amount}</p>
@@ -28,4 +29,4 @@ const GuaranteeCard = ({ item }: GuaranteeCardProps) => {
   );
 };
 
-export default GuaranteeCard;
+export default Card;
