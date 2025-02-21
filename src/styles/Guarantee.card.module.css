@@ -1,0 +1,31 @@
+.showMoreButton {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 8px 12px;
+  background-color: #007bff;
+  /* Bootstrap primary color */
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.showMoreButton:hover {
+  background-color: #0056b3;
+  /* Darker shade for hover effect */
+}
+
+.cardStyle {
+  padding: 0;
+}
+
+.dropdownCard {
+  height: 300px;
+  overflow: auto;
+}
+
+.cardWrapper {
+  width: 32.333333% !important;
+}
