@@ -1,47 +1,32 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
-import axios, { type AxiosError } from "axios";
-import { useEffect, useState } from "react";
+import type { Company } from "../App";
 
-type Company = {
-  key: string;
-  value: string;
+type CompanyDropdownProps = {
+  companyDropdowns: Company[];
+  error: string | undefined;
+  onChange: (companyValue: string) => void;
 };
 
-type CompanyDropdownResponse = {
-  companyDropdown: Company[];
-};
-
-const CompanyDropdown = () => {
-  const [companyDropdowns, setCompanyDropdowns] = useState<Company[]>([]);
-  const [loading, setLoading] = useState<boolean>(true);
-  const [error, setError] = useState<string | "">();
-
-  useEffect(() => {
-    const fetchCompanyDropdown = async () => {
-      try {
-        const response = await axios.get(
-          "http://localhost:5000/companyDropdown"
-        );
-        setCompanyDropdowns(response.data);
-      } catch (error) {
-        setError((error as AxiosError).message);
-      } finally {
-        setLoading(false);
-      }
-    };
-    fetchCompanyDropdown();
-  }, []);
-
+const CompanyDropdown = ({
+  companyDropdowns,
+  error,
+  onChange,
+}: CompanyDropdownProps) => {
   return (
     <>
       {error && <p>Error occured {error}</p>}
-      <select className="form-select">
-        {companyDropdowns.map((company) => (
-          <option key={company.key} value={company.value}>
-            {company.value}
-          </option>
-        ))}
-      </select>
+      {!error && (
+        <select
+          className="form-select"
+          onChange={(event) => onChange(event.target.value)}
+        >
+          {companyDropdowns.map((company) => (
+            <option key={company.key} value={company.value}>
+              {company.value}
+            </option>
+          ))}
+        </select>
+      )}
     </>
   );
 };
