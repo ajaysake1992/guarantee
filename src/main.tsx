@@ -4,9 +4,13 @@ import "./index.css";
 import App from "./App.tsx";
 import "bootstrap-icons/font/bootstrap-icons.css";
 import "bootstrap/dist/css/bootstrap.min.css";
+import { I18nextProvider } from "react-i18next";
+import i18n from "./i18n";
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
-    <App />
+    <I18nextProvider i18n={i18n}>
+      <App />
+    </I18nextProvider>
   </StrictMode>
 );

@@ -1,3 +1,4 @@
+import { useTranslation } from "react-i18next";
 import styles from "../styles/GuaranteeCard.module.css";
 
 export type CardDetails = {
@@ -12,11 +13,16 @@ type CardProps = {
 };
 
 const Card = ({ item, onClick }: CardProps) => {
+  const { t } = useTranslation();
   return (
     <div className={`card  ${styles.cardStyle}`} onClick={onClick}>
       <div className="card-body">
-        <h5 className="card-title">Guarantee {item.id}</h5>
-        <p className="card-text">Amount: {item.amount}</p>
+        <h5 className="card-title">
+          {t("card.guarantee")} {item.id}
+        </h5>
+        <p className="card-text">
+          {t("card.amount")} {item.amount}
+        </p>
         <span
           className={`badge ${
             item.status === "Active" ? "bg-success" : "bg-secondary"

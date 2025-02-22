@@ -1,4 +1,10 @@
 {
+  "companyDropdown": [
+    { "key": "1", "value": "Jp morgan change"},
+    { "key": "2", "value": "Bank of america"},
+    { "key": "3", "value": "Ubs"},
+    { "key": "4", "value": "Citi bank services"}
+  ],
   "cardRecords": [
     { "id": 1, "amount": "1,000,000 EUR", "status": "Active" },
     { "id": 2, "amount": "500,000 EUR", "status": "Pending" },

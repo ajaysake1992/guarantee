@@ -1,0 +1,8 @@
+{
+  "card": {
+    "guarantee": "Guarantee",
+    "amount": "Amount",
+    "status": "Status",
+    "showMore": "Show More"
+  }
+}

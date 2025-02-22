@@ -3,12 +3,14 @@ import { useEffect, useState } from "react"; // Using FontAwesome for plus icon
 import styles from "../styles/GuaranteeCards.module.css";
 import Card, { type CardDetails } from "./Card";
 import axios, { type AxiosError } from "axios";
+import { useTranslation } from "react-i18next";
 
 const GuaranteeCards = () => {
   const [guaranteeData, setGuaranteeData] = useState<CardDetails[]>([]);
   const [loading, setLoading] = useState<boolean>(true);
   const [error, setError] = useState<string | "">();
   const [showMoreCards, setShowMoreCards] = useState(false);
+  const { t } = useTranslation();
 
   useEffect(() => {
     const fetchLandingPageData = async () => {
@@ -70,7 +72,7 @@ const GuaranteeCards = () => {
             aria-label="Show more guarantee cards"
           >
             <i className="bi bi-plus-circle me-1"></i>
-            <span className="d-block">Show More</span>
+            <span className="d-block">{t("card.showMore")}</span>
           </button>
         )}
       </div>
