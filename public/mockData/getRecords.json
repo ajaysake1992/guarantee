@@ -6,21 +6,21 @@
     { "key": "4", "value": "Citi bank services"}
   ],
   "cardRecords": [
-    { "id": 1, "amount": "1,000,000 EUR", "status": "Active" },
-    { "id": 2, "amount": "500,000 EUR", "status": "Pending" },
-    { "id": 3, "amount": "750,000 EUR", "status": "Pending" },
-    { "id": 4, "amount": "600,000 EUR", "status": "Pending" },
-    { "id": 5, "amount": "1,000,000 EUR", "status": "Pending" },
-    { "id": 6, "amount": "500,000 EUR", "status": "Pending" },
-    { "id": 7, "amount": "750,000 EUR", "status": "Pending" },
-    { "id": 8, "amount": "600,000 EUR", "status": "Pending" },
-    { "id": 9, "amount": "1,000,000 EUR", "status": "Pending" },
-    { "id": 10, "amount": "500,000 EUR", "status": "Pending" },
-    { "id": 11, "amount": "750,000 EUR", "status": "Pending" },
-    { "id": 12, "amount": "600,000 EUR", "status": "Pending" },
-    { "id": 13, "amount": "1,000,000 EUR", "status": "Pending" },
-    { "id": 14, "amount": "500,000 EUR", "status": "Pending" },
-    { "id": 15, "amount": "750,000 EUR", "status": "Pending" },
-    { "id": 16, "amount": "600,000 EUR", "status": "Pending" }
+    { "id": 1, "amount": "1,000,000 EUR", "status": "Active", "company": "Jp morgan change" },
+    { "id": 2, "amount": "500,000 EUR", "status": "Pending", "company": "Bank of america" },
+    { "id": 3, "amount": "750,000 EUR", "status": "Pending", "company": "Jp morgan change" },
+    { "id": 4, "amount": "600,000 EUR", "status": "Pending", "company": "Bank of america" },
+    { "id": 5, "amount": "1,000,000 EUR", "status": "Pending", "company": "Jp morgan change" },
+    { "id": 6, "amount": "500,000 EUR", "status": "Pending", "company": "Bank of america" },
+    { "id": 7, "amount": "750,000 EUR", "status": "Pending", "company": "Bank of america" },
+    { "id": 8, "amount": "600,000 EUR", "status": "Pending", "company": "Citi bank services" },
+    { "id": 9, "amount": "1,000,000 EUR", "status": "Pending", "company": "Ubs" },
+    { "id": 10, "amount": "500,000 EUR", "status": "Pending", "company": "Citi bank services"},
+    { "id": 11, "amount": "750,000 EUR", "status": "Pending", "company": "Citi bank services" },
+    { "id": 12, "amount": "600,000 EUR", "status": "Pending" ,"company": "Citi bank services"},
+    { "id": 13, "amount": "1,000,000 EUR", "status": "Pending", "company": "Ubs" },
+    { "id": 14, "amount": "500,000 EUR", "status": "Pending" , "company": "Ubs"},
+    { "id": 15, "amount": "750,000 EUR", "status": "Pending", "company": "Ubs" },
+    { "id": 16, "amount": "600,000 EUR", "status": "Pending", "company": "Bank of america" }
   ]
 }
